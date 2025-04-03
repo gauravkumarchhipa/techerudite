@@ -1,15 +1,11 @@
 import React from "react";
 import "./styles/index.scss";
-import Navbar from "./components/Navbar";
-import HeroSection from "./components/HeroSection";
+import Home from "./components/Home/Home";
 import Footer from "./components/Footer";
 function App() {
   return (
     <>
-      <div className="main-wrapper">
-        <Navbar />
-        <HeroSection />
-      </div>
+      <Home />
       <Footer />
     </>
   );

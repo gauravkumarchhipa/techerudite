@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/_hero-section.scss';
+import '../../styles/_hero-section.scss';
 
 const HeroSection = () => (
   <section className="hero-section">

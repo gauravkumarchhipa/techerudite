@@ -9,16 +9,15 @@ const Navbar = () => {
       <div className="navbar__container">
         <img src={logo} alt="Gecko Accountancy" className="navbar__logo" />
 
-        <nav className={`navbar__nav ${isMobileMenuOpen ? 'is-open' : ''}`}>
+        <nav className={`navbar__nav ${isMobileMenuOpen ? "is-open" : ""}`}>
           <ul>
             <li className="active">Services</li>
             <li>About us</li>
             <li>Blogs</li>
             <li>Case Studies</li>
+            <button className="navbar__cta">CONTACT US</button>
           </ul>
         </nav>
-
-        <button className="navbar__cta">CONTACT US</button>
 
         <div
           className="navbar__toggle"
