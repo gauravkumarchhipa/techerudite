@@ -1,0 +1,18 @@
+@import './variables';
+@import './mixins';
+@import './navbar';
+@import './hero-section';
+@import './footer';
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f2f6f9;
+}
+
+.main-wrapper {
+    background-image: url('../assets/header.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+  }
+  

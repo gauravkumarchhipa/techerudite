@@ -1,0 +1,62 @@
+.hero-section {
+    background: transparent; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4rem;
+  
+    .text-content {
+      max-width: 50%;
+  
+      h1 {
+        font-size: 3rem;
+        font-weight: bold;
+      }
+  
+      p {
+        margin-top: 1rem;
+        font-size: 1.1rem;
+      }
+  
+      .question-box {
+        background: white;
+        padding: 1.5rem;
+        border-radius: 10px;
+        margin-top: 2rem;
+        text-align: center;
+        box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  
+        .buttons {
+          display: flex;
+          justify-content: center;
+          gap: 1rem;
+          margin-top: 1rem;
+  
+          .yes-btn,
+          .no-btn {
+            padding: 0.5rem 1.5rem;
+            font-size: 1rem;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+          }
+  
+          .yes-btn {
+            background-color: orange;
+            color: white;
+          }
+  
+          .no-btn {
+            background-color: #ddd;
+          }
+        }
+  
+        small {
+          display: block;
+          margin-top: 1rem;
+          font-size: 0.85rem;
+        }
+      }
+    }
+  }
+  
