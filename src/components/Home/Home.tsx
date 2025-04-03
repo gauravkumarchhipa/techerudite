@@ -7,6 +7,7 @@ import ProcessSection from "./ProcessSection";
 import TestimonialSection from "./TestimonialSection";
 import BlogSection from "./BlogeSection";
 import ContactForm from "./ContactForm";
+import Footer from "../Footer";
 
 const Home = () => {
   return (
@@ -21,6 +22,7 @@ const Home = () => {
       <TestimonialSection />
       <BlogSection />
       <ContactForm />
+      <Footer />
     </>
   );
 };
