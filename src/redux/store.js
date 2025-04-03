@@ -1,10 +1,11 @@
 
 import { configureStore } from '@reduxjs/toolkit';
 import footerReducer from './slices/footerSlice';
-
+import blogReducer from './slices/blogSlice';
 export const store = configureStore({
   reducer: {
     footer: footerReducer,
+    blog: blogReducer,
   },
 });
 

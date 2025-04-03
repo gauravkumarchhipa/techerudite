@@ -8,7 +8,6 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   const dispatch = useAppDispatch();
   const { data }: any = useAppSelector((state: RootState) => state.footer);
-  console.log(data?.data, data?.data?.contact_no);
   useEffect(() => {
     dispatch(fetchFrontendDetails());
   }, [dispatch]);
