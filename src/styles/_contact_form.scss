@@ -1,22 +1,27 @@
 .contact-form {
-    padding: 4rem 2rem;
-    text-align: center;
-  
-    small {
-      display: block;
-      max-width: 800px;
-      margin: 0 auto 2rem auto;
-      color: #4b5563;
-      font-size: 0.95rem;
-    }
-  
-    &__grid {
-      max-width: 900px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 1.5rem;
-  
+  padding: 4rem 2rem;
+  text-align: center;
+
+  small {
+    display: block;
+    max-width: 800px;
+    margin: 0 auto 2rem auto;
+    color: #4b5563;
+    font-size: 0.95rem;
+  }
+
+  &__grid {
+    max-width: 900px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+
       input,
       select {
         padding: 0.5rem 0;
@@ -27,47 +32,47 @@
         outline: none;
         width: 100%;
       }
-  
+
       select {
         cursor: pointer;
       }
-  
-      button {
-        grid-column: 1 / -1;
-        margin-top: 1.5rem;
-        padding: 0.75rem;
-        border: none;
-        border-radius: 30px;
-        background-color: #ff6b00;
-        color: #fff;
-        font-size: 1rem;
-        font-weight: 600;
-        cursor: pointer;
-        transition: background-color 0.2s ease;
-  
-        &:hover {
-          background-color: #e65c00;
-        }
+
+      .error {
+        margin-top: 0.25rem;
+        font-size: 0.8rem;
+        color: #dc2626;
       }
     }
-  
-    @media (max-width: 768px) {
-      &__grid {
-        grid-template-columns: 1fr;
+
+    button {
+      grid-column: 1 / -1;
+      margin-top: 1.5rem;
+      padding: 0.75rem;
+      border: none;
+      border-radius: 30px;
+      background-color: #ff6b00;
+      color: #fff;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #e65c00;
       }
+    }
+
+    .success {
+      grid-column: 1 / -1;
+      text-align: center;
+      margin-top: 1rem;
+      color: #16a34a;
+      font-size: 0.9rem;
     }
   }
 
-  .error {
-    color: #dc2626;
-    font-size: 0.8rem;
-    margin-top: -0.5rem;
+  @media (max-width: 768px) {
+    &__grid {
+      grid-template-columns: 1fr;
+    }
   }
-  
-  .success {
-    color: #16a34a;
-    font-size: 0.9rem;
-    margin-top: 1rem;
-  }
-  
-  
+}

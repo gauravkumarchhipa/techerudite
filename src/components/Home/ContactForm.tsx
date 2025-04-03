@@ -39,6 +39,7 @@ const ContactForm = () => {
       setErrors(validationErrors);
       return;
     }
+    setErrors({});
     dispatch(fetchContactForm(form));
   };
 
@@ -50,66 +51,78 @@ const ContactForm = () => {
       </small>
 
       <form className="contact-form__grid" onSubmit={submitHandler}>
-        <input
-          type="text"
-          placeholder="Name"
-          name="firstName"
-          value={form.firstName}
-          onChange={handleChange}
-        />
-        {errors.firstName && (
-          <small className="error">{errors.firstName}</small>
-        )}
+        <div className="form-group">
+          <input
+            type="text"
+            placeholder="Name"
+            name="firstName"
+            value={form.firstName}
+            onChange={handleChange}
+          />
+          {errors.firstName && (
+            <small className="error">{errors.firstName}</small>
+          )}
+        </div>
 
-        <input
-          type="text"
-          placeholder="Last Name"
-          name="lastName"
-          value={form.lastName}
-          onChange={handleChange}
-        />
+        <div className="form-group">
+          <input
+            type="text"
+            placeholder="Last Name"
+            name="lastName"
+            value={form.lastName}
+            onChange={handleChange}
+          />
+        </div>
 
-        <input
-          type="email"
-          placeholder="Mail"
-          name="email"
-          value={form.email}
-          onChange={handleChange}
-        />
-        {errors.email && <small className="error">{errors.email}</small>}
+        <div className="form-group">
+          <input
+            type="email"
+            placeholder="Mail"
+            name="email"
+            value={form.email}
+            onChange={handleChange}
+          />
+          {errors.email && <small className="error">{errors.email}</small>}
+        </div>
 
-        <input
-          type="text"
-          placeholder="Phone"
-          name="phone"
-          value={form.phone}
-          onChange={handleChange}
-        />
-        {errors.phone && <small className="error">{errors.phone}</small>}
+        <div className="form-group">
+          <input
+            type="text"
+            placeholder="Phone"
+            name="phone"
+            value={form.phone}
+            onChange={handleChange}
+          />
+          {errors.phone && <small className="error">{errors.phone}</small>}
+        </div>
 
-        <select name="budget" value={form.budget} onChange={handleChange}>
-          <option value="">Budget</option>
-          <option value="$500 - $1,000">$500 - $1,000</option>
-          <option value="$1,000 - $5,000">$1,000 - $5,000</option>
-        </select>
+        <div className="form-group">
+          <select name="budget" value={form.budget} onChange={handleChange}>
+            <option value="">Budget</option>
+            <option value="$500 - $1,000">$500 - $1,000</option>
+            <option value="$1,000 - $5,000">$1,000 - $5,000</option>
+          </select>
+        </div>
 
-        <input
-          type="text"
-          placeholder="Description"
-          name="description"
-          value={form.description}
-          onChange={handleChange}
-        />
-        {errors.description && (
-          <small className="error">{errors.description}</small>
-        )}
+        <div className="form-group">
+          <input
+            type="text"
+            placeholder="Description"
+            name="description"
+            value={form.description}
+            onChange={handleChange}
+          />
+          {errors.description && (
+            <small className="error">{errors.description}</small>
+          )}
+        </div>
 
         <button type="submit" disabled={loading}>
           {loading ? "Submitting..." : "Submit"}
         </button>
 
-        {error && <p className="error">❌ {error}</p>}
-        {data && <p className="success">✅ Form submitted successfully!</p>}
+        {error && <p className="error"> {error}</p>}
+        {data && <p className="success">Form submitted successfully!</p>}
       </form>
     </section>
   );
