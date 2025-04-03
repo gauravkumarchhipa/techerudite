@@ -3,6 +3,10 @@ import HeroSection from "./HeroSection";
 import ServiceSection from "./ServiceSection";
 import AboutSection from "./AboutSection";
 import Navbar from "../Navbar";
+import ProcessSection from "./ProcessSection";
+import TestimonialSection from "./TestimonialSection";
+import BlogSection from "./BlogeSection";
+import ContactForm from "./ContactForm";
 
 const Home = () => {
   return (
@@ -12,7 +16,11 @@ const Home = () => {
         <HeroSection />
       </div>
       <ServiceSection />
-      <AboutSection/>
+      <AboutSection />
+      <ProcessSection />
+      <TestimonialSection />
+      <BlogSection />
+      <ContactForm />
     </>
   );
 };

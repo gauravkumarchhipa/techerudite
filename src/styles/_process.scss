@@ -1,0 +1,68 @@
+.process {
+  padding: 4rem 1rem;
+  background-color: #fff;
+  text-align: center;
+
+  &__title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+    color: #111827;
+  }
+
+  &__grid {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+  }
+
+  &__circle-wrapper {
+    position: relative;
+    width: 240px;
+    height: 240px;
+  }
+
+  &__circle-svg {
+    width: 100%;
+    height: 100%;
+    transform: rotate(-90deg); // start from top
+
+    .track {
+      fill: none;
+      stroke: #f3f4f6; // light gray background
+      stroke-width: 6;
+    }
+
+    .arc {
+      fill: none;
+      stroke: #ff6b00; // orange
+      stroke-width: 6;
+      stroke-linecap: round;
+      stroke-dasharray: 140 440; // arc + empty space
+      stroke-dashoffset: 0;
+    }
+  }
+
+  &__content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 160px;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 2;
+
+    h3 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      font-size: 0.85rem;
+      color: #4b5563;
+      line-height: 1.4;
+    }
+  }
+}
