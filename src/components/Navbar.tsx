@@ -11,10 +11,18 @@ const Navbar = () => {
 
         <nav className={`navbar__nav ${isMobileMenuOpen ? "is-open" : ""}`}>
           <ul>
-            <li className="active">Services</li>
-            <li>About us</li>
-            <li>Blogs</li>
-            <li>Case Studies</li>
+            <li>
+              <a href="#services">Services</a>
+            </li>
+            <li>
+              <a href="#aboutus">About us</a>
+            </li>
+            <li>
+              <a href="#blog">Blogs</a>
+            </li>
+            <li>
+              <a href="#cashstudy">Case Studies</a>
+            </li>
             <button className="navbar__cta">CONTACT US</button>
           </ul>
         </nav>

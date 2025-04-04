@@ -16,11 +16,19 @@ const Home = () => {
         <Navbar />
         <HeroSection />
       </div>
-      <ServiceSection />
-      <AboutSection />
+      <div id="services">
+        <ServiceSection />
+      </div>
+      <div id="aboutus">
+        <AboutSection />
+      </div>
       <ProcessSection />
-      <TestimonialSection />
-      <BlogSection />
+      <div id="cashstudy">
+        <TestimonialSection />
+      </div>
+      <div id="blog">
+        <BlogSection />
+      </div>
       <ContactForm />
       <Footer />
     </>
