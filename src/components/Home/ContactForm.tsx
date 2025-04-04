@@ -6,7 +6,7 @@ const ContactForm = () => {
   const dispatch = useAppDispatch();
   const { loading, error, data } = useAppSelector((state) => state.contactForm);
 
-  const [form, setForm] = useState({
+  const [form, setForm] = useState<any>({
     firstName: "",
     lastName: "",
     email: "",
@@ -59,8 +59,8 @@ const ContactForm = () => {
             value={form.firstName}
             onChange={handleChange}
           />
-          {errors.firstName && (
-            <small className="error">{errors.firstName}</small>
+          {errors?.firstName && (
+            <small className="error">{errors?.firstName}</small>
           )}
         </div>
 
@@ -82,7 +82,7 @@ const ContactForm = () => {
             value={form.email}
             onChange={handleChange}
           />
-          {errors.email && <small className="error">{errors.email}</small>}
+          {errors?.email && <small className="error">{errors?.email}</small>}
         </div>
 
         <div className="form-group">
@@ -93,7 +93,7 @@ const ContactForm = () => {
             value={form.phone}
             onChange={handleChange}
           />
-          {errors.phone && <small className="error">{errors.phone}</small>}
+          {errors?.phone && <small className="error">{errors?.phone}</small>}
         </div>
 
         <div className="form-group">
@@ -112,8 +112,8 @@ const ContactForm = () => {
             value={form.description}
             onChange={handleChange}
           />
-          {errors.description && (
-            <small className="error">{errors.description}</small>
+          {errors?.description && (
+            <small className="error">{errors?.description}</small>
           )}
         </div>
 

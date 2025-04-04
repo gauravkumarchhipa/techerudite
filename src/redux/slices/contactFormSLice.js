@@ -1,8 +1,7 @@
-// src/redux/slices/contactFormSlice.ts
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axiosInstance from '../../api/axiosInstance';
 
-const initialState: any = {
+const initialState = {
   data: null,
   loading: false,
   error: null,
@@ -10,12 +9,12 @@ const initialState: any = {
 
 export const fetchContactForm = createAsyncThunk(
   'contactForm/fetchDetails',
-  async (formData: any, { rejectWithValue }) => {
+  async (formData, { rejectWithValue }) => {
     try {
       const response = await axiosInstance.post('/contact/send', formData);
       return response.data;
     } catch (error) {
-      return rejectWithValue(error.response?.data || error.message);
+      return rejectWithValue(error.response?.data?.message || error.message);
     }
   }
 );
