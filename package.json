@@ -27,7 +27,11 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "prod:build": "env-cmd -f .env.production react-scripts build",
+    "test:build": "env-cmd -f .env.test react-scripts build",
+    "prod:start": "env-cmd -f .env.production react-scripts start",
+    "test:start": "env-cmd -f .env.test react-scripts start"
   },
   "eslintConfig": {
     "extends": [
@@ -48,6 +52,7 @@
     ]
   },
   "devDependencies": {
-    "autoprefixer": "^10.4.21"
+    "autoprefixer": "^10.4.21",
+    "env-cmd": "^10.1.0"
   }
 }
